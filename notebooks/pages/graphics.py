@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import pickle
 from sklearn import tree
 
 df = pd.read_csv('../data/Australian_Rains.csv')
