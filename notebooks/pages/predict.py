@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import pickle
-import numpy as np
 
 def predict_word(pred):
     if pred == 1: return "Завтра будет дождь"
