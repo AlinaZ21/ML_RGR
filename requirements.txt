@@ -4,4 +4,4 @@ pandas==2.0.3
 scikit-learn==1.2.2
 streamlit
 tensorflow==2.13.0
-from category_encoders == 2.6.3
+category_encoders == 2.6.3
