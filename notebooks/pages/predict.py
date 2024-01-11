@@ -14,26 +14,26 @@ if uploaded_file is not None:
     st.write("Загруженный датасет:", df)
 
 else:
-    df = pd.read_csv(r'C:/Users/AlinaZ/WebApplication/data/Australian_Rains.csv')
+    df = pd.read_csv('data/Australian_Rains.csv')
     st.write("Загруженный датасет 'Australian Rains':", df)
 
-with open(r'C:/Users/AlinaZ/WebApplication/models/ML1.pkl', 'rb') as file:
+with open('models/ML1.pkl', 'rb') as file:
         ML1 = pickle.load(file)
 
-with open(r'C:/Users/AlinaZ/WebApplication/models/ML2.pkl', 'rb') as file:
+with open('models/ML2.pkl', 'rb') as file:
     ML2 = pickle.load(file)
 
-with open(r'C:/Users/AlinaZ/WebApplication/models/ML3.pkl', 'rb') as file:
+with open('models/ML3.pkl', 'rb') as file:
     ML3 = pickle.load(file)
 
-with open(r'C:/Users/AlinaZ/WebApplication/models/ML4.pkl', 'rb') as file:
+with open('models/ML4.pkl', 'rb') as file:
     ML4= pickle.load(file)
 
-with open(r'C:/Users/AlinaZ/WebApplication/models/ML5.pkl', 'rb') as file:
+with open('models/ML5.pkl', 'rb') as file:
     ML5 = pickle.load(file)
 
 from tensorflow.keras.models import load_model
-ML6 = load_model(r'C:/Users/AlinaZ/WebApplication/models/ML6.keras')
+ML6 = load_model('models/ML6.keras')
 
 x = pd.DataFrame(df.drop(['RainTomorrow'], axis = 1))
 y = pd.DataFrame(df['RainTomorrow'])
@@ -147,7 +147,7 @@ data = pd.DataFrame({'Date': [Date],
 
 
 
-with open(r'C:/Users/AlinaZ/WebApplication/models/Binary_Encoder.pkl', 'rb') as file:
+with open('models/Binary_Encoder.pkl', 'rb') as file:
     BinEncod = pickle.load(file)
 
 data_category = BinEncod.fit_transform(df.select_dtypes(include=['object'])).astype(int)

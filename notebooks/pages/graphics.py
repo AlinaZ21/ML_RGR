@@ -5,7 +5,7 @@ import seaborn as sns
 import pickle
 from sklearn import tree
 
-df = pd.read_csv(r'C:/Users/AlinaZ/WebApplication/data/Australian_Rains.csv')
+df = pd.read_csv('data/Australian_Rains.csv')
 
 st.write("Загруженный датасет 'Australian Rains'")
 
@@ -48,7 +48,7 @@ st.pyplot(plt)
 st.header("Дерево решений")
 
 x=pd.DataFrame(df.drop(['RainTomorrow'],axis=1))
-with open(r'C:/Users/AlinaZ/WebApplication/models/DTC.pkl', 'rb') as file:
+with open('models/DTC.pkl', 'rb') as file:
         DTC = pickle.load(file)
 
 fig = plt.figure(figsize=(25,20))
