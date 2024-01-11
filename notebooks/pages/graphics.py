@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import tree
 
-df = pd.read_csv('../data/Australian_Rains.csv')
+df = pd.read_csv('data/Australian_Rains.csv')
 
 st.write("Загруженный датасет 'Australian Rains'")
 
