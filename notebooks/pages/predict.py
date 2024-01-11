@@ -32,7 +32,7 @@ with open('models/ML5.pkl', 'rb') as file:
     ML5 = pickle.load(file)
 
 from tensorflow.keras.models import load_model
-ML6 = load_model('models/ML6.keras')
+ML6 = load_model('models/ML6.h5')
 
 x = pd.DataFrame(df.drop(['RainTomorrow'], axis = 1))
 y = pd.DataFrame(df['RainTomorrow'])
